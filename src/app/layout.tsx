@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import Orderinformation from "@/components/Orderinformation";
+import ScrollableTabs from "@/components/ScrollableTabs";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'], // Specify the font weights you need
+  subsets: ['latin'], // Specify the subsets you need
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,15 +21,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <main className="min-h-screen">
-          <div className="bg-hero-image bg-cover bg-center w-full h-[51.2vw] max-h-[350px] flex flex-col justify-center relative">
-            <div className="bg-[rgba(0,0,0,0.2)] w-full h-[51.2vw] absolute"></div>
-            <div className='flex flex-col justify-center h-[75px] w-full bg-[rgba(255,255,255,0.8)] relative'>
-              <h1 className="font-bold text-primaryText-light text-20 text-center">Sista Place</h1>
-              <p className="font-medium text-secondaryText-light text-12 text-center">203 Av. d'Argenteuil, 92270 Bois-Colombes</p>
+          <section className="">
+            <div className="bg-hero-image bg-cover bg-center w-full h-[51.2vw] max-h-[350px] flex flex-col justify-center relative">
+              <div className="bg-[rgba(0,0,0,0.2)] w-full h-[51.2vw] max-h-[350px] absolute"></div>
+              <div className='flex flex-col justify-center h-[75px] w-full bg-[rgba(255,255,255,0.8)] relative'>
+                <h1 className="font-bold text-primaryText-light text-20 text-center">Sista Place</h1>
+                <p className="font-medium text-secondaryText-light text-12 text-center">203 Av. d'Argenteuil, 92270 Bois-Colombes</p>
+              </div>
             </div>
-          </div>
+          </section>
+          <Orderinformation />
+          <ScrollableTabs />
           {children}
         </main>
       </body>
