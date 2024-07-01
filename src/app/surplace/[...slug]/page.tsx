@@ -56,7 +56,7 @@ export default function Home() {
       <section className='py-[10px] px-[20px]'>
         {data?.menu?.filter((row: any) => row?.type === data?.activeTab).map((menuItem: any) => {
           return (
-            <div className='py-[10px] flex justify-between items-center'>
+            <div className='py-[10px] flex justify-between items-center' key={menuItem.id}>
               <div>
                 <h2 className='w-[170px] text-12 font-bold text-primaryText-light'>{menuItem?.titre}</h2>
                 <text className='w-[170px] text-8 font-semibold text-secondaryText-light'>{menuItem?.description}</text>

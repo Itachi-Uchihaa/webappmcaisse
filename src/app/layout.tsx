@@ -28,7 +28,7 @@ export default function RootLayout({
               <div className="bg-[rgba(0,0,0,0.2)] w-full h-[51.2vw] max-h-[350px] absolute"></div>
               <div className='flex flex-col justify-center h-[75px] w-full bg-[rgba(255,255,255,0.8)] relative'>
                 <h1 className="font-bold text-primaryText-light text-20 text-center">Sista Place</h1>
-                <p className="font-medium text-secondaryText-light text-12 text-center">203 Av. d'Argenteuil, 92270 Bois-Colombes</p>
+                <p className="font-medium text-secondaryText-light text-12 text-center">203 Av. d&apos;Argenteuil, 92270 Bois-Colombes</p>
               </div>
             </div>
           </section>
