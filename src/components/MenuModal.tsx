@@ -20,7 +20,7 @@ export default function MenuModal({ menuItem, closeModal }: ImageModalProps) {
       </div>
       {menuItem?.options?.map((option: any) => {
         return (
-          <div>
+          <div key={option.id}>
             <div className='flex justify-between items-center my-[30px] mb-[22px]'>
               <p className='text-16 font-bold text-secondaryText-light'>{`${option?.titre} :`}</p>
               {
